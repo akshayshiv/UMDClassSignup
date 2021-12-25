@@ -78,9 +78,9 @@ for i in range(len(student_classes)): #want to add all the classes in the arrays
         #Holdfile
         try:
                 maincontent.find_element(By.XPATH, '//table/tbody/tr[6]/td/div')
-                sign_up_special(maincontent, '//*[starts-with(@id, "openSectionCheckbox_")]')
         except NoSuchElementException:
                 continue
+        sign_up_special(maincontent, '//*[starts-with(@id, "openSectionCheckbox_")]') #moving here makes it much faster
 
 
 
