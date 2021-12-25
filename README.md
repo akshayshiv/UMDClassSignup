@@ -8,7 +8,7 @@ This is a spam bot using `Selenium` Browser Automation. It is always a struggle 
 
 - This installs the selenium package and the driver to use it on google chrome. Visit [here](https://www.selenium.dev/downloads/) to decide which package best serves your needs. 
 
-# Windows Installation
+## Windows Installation
 - Install python [here](https://www.python.org/downloads/windows/)
 - Open the command prompt for python and run `pip.exe install selenium` in the console.
 - User the same link above to install the package and driver that suits your needs.
