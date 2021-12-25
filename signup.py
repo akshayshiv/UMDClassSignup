@@ -59,7 +59,7 @@ while not found:
                 continue
 # What if there are multiple sessions?
 no_multiple_session = False
-time.sleep(2)
+time.sleep(1)
 try:
         maincontent.find_element(By.XPATH, '//div[2]/button').click()
 except NoSuchElementException:
@@ -74,8 +74,7 @@ for i in range(len(student_classes)): #want to add all the classes in the arrays
         saved_boxes[1].send_keys(sections[i])
         maincontent = driver.find_element(By.TAG_NAME, 'form')
         maincontent.find_elements(By.TAG_NAME, 'button')[-2].click() #This is the submit button because the buttons before this are edit/drop and view schedule is after
-        waitlist = False
-        #Holdfile
+        #Holdfile and Waitlist
         try:
                 maincontent.find_element(By.XPATH, '//table/tbody/tr[6]/td/div')
         except NoSuchElementException:
