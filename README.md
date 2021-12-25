@@ -13,5 +13,6 @@ This is a spam bot using `Selenium` Browser Automation. It is always a struggle 
 - Open the command prompt for python and run `pip.exe install selenium` in the console.
 - User the same link above to install the package and driver that suits your needs.
 
-
+# Authenticating
+THe only other thing you have to add into the code is where it says "USERNAME" and "PASSWORD" to authenticate with your Directory ID and password. This ensures it so that it is your account that is logging in.
 Still a work in progess, I happily welcome Pull Requests with ways this can be made better!
