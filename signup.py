@@ -7,8 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 import time
-from exceptions import TestudoDownError
-
+from exceptions import Checks as testudo
 def get_options():
         options = Options()
         options.add_argument("--window-size=1920,1080")
@@ -35,6 +34,7 @@ if  __name__ == "main":
 
         url = "https://testudo.umd.edu/"
 
+        testudo.is_Testudo_down()
 
         options = get_options()
 
@@ -45,7 +45,7 @@ if  __name__ == "main":
         driver.switch_to.window(driver.window_handles[-1])
         driver.implicitly_wait(5)
         username = driver.find_element(By.XPATH, '//*[@id="username"]').send_keys('UNAME')
-        password = driver.find_element(By.XPATH, '//*[@id="password"]').send_keys('PWORD%')
+        password = driver.find_element(By.XPATH, '//*[@id="password"]').send_keys('PWORD')
         driver.find_element(By.NAME, '_eventId_proceed').click()
 
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'nav_button'))) # Will this also give time for user to authenticate?
