@@ -13,9 +13,9 @@ class Checks:
         end_day_alldays=datetime.today().replace(hour=23, minute=00)
         if day == 6:
             if now < morning_day_sun or now > end_day_alldays:
-                raise ValueError("Try Testudo on operating hours")
+                raise TestudoDownError("Try Testudo on operating hours")
         else:
             if now < morning_day_mf or now > end_day_alldays:
-                raise ValueError("Try Testudo on operating hours")
+                raise TestudoDownError("Try Testudo on operating hours")
 
         
